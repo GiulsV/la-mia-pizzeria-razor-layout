@@ -1,67 +1,73 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-
-<h1>Razor Snack</h1>
-
-
-<p>
-    1. Dichiarare una variabile valorizzandola con il nostro nome.
-    Dichiarare un'altra variabile valorizzandola con il nostro cognome.
-    Stampare il nostro nome e cognome all'interno di un tag h2.
-</p>
-
 @{
-    string nome = "Giulia";
-    string cognome = "Valente";
+    Layout = "_SnackLayout";
 }
 
-<h2>@nome @cognome</h2>
-<hr />
+<section>
+    <p>
+        1. Dichiarare una variabile valorizzandola con il nostro nome.
+        Dichiarare un'altra variabile valorizzandola con il nostro cognome.
+        Stampare il nostro nome e cognome all'interno di un tag h2.
+    </p>
 
-<p>
-    2. Creare una funzione che stampa la somma dei numeri che vanno da 1 a n (con n passato come parametro - n incluso)
-    Stampare dentro uno span il risultato.
-</p>
-
-@{
-    int SumNumber(int num)
-    {
-        int sum = 0;
-        for (int i = 1; i <= num; i++)
-        {
-            sum += i;
-        }
-
-        return sum;
+    @{
+        string nome = "Giulia";
+        string cognome = "Valente";
     }
-}
 
-<span>@SumNumber(8)</span>
-<hr />
+    <h2>@nome @cognome</h2>
+    <hr />
+</section>
 
-<p>
-    3. Contare quante volte la lettera a è presente nalla frase "nel mezzo del cammin di nostra vita" e stampare questo valore in pagina
-</p>
+<section>
+    <p>
+        2. Creare una funzione che stampa la somma dei numeri che vanno da 1 a n (con n passato come parametro - n incluso)
+        Stampare dentro uno span il risultato.
+    </p>
 
-@{
-    string text = "nel mezzo del cammin di nostra vita";
-    int count = 0;
-    foreach(char a in text)
-    {
-        if(a == 'a')
+    @{
+        int SumNumber(int num)
         {
-            count++;
+            int sum = 0;
+            for (int i = 1; i <= num; i++)
+            {
+                sum += i;
+            }
+            return sum;
         }
     }
-}
+    <span>@SumNumber(8)</span>
+
+    <hr />
+</section>
+
+<section>
+    <p>
+        3. Contare quante volte la lettera a è presente nalla frase "nel mezzo del cammin di nostra vita" e stampare questo valore in pagina
+    </p>
+
+    @{
+        string text = "nel mezzo del cammin di nostra vita";
+        int count = 0;
+        foreach (char a in text)
+        {
+            if (a == 'a')
+            {
+                count++;
+            }
+        }
+    }
     <span>La lettera "a" è presente @count volte nel testo</span>
 
-<hr />
+    <hr />
+</section>
 
-<p>
-    4. Creare una List<int> di 20 numeri interi (generati random da 1 a 90, 1 e 90 inclusi) e mostrare in pagina solo i numeri compresi tra 20 e 70
-</p>
+<section>
+    <p>
+        4. Creare una List<int> di 20 numeri interi (generati random da 1 a 90, 1 e 90 inclusi) e mostrare in pagina solo i numeri compresi tra 20 e 70
+    </p>
 
     @{
         List<int> numbers = new List<int>();
@@ -82,27 +88,32 @@
         }
     </ul>
 
-<hr />
+    <hr />
+</section>
 
-<p>
-    5. Stampare in pagina la data e l'ora attuale (usando la classe DateTime) con il formato anno-mese-giorno ore:minuti:secondi
-</p>
+<section>
+    <p>
+        5. Stampare in pagina la data e l'ora attuale (usando la classe DateTime) con il formato anno-mese-giorno ore:minuti:secondi
+    </p>
     <p>
         @DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
     </p>
 
-<hr />
+    <hr />
+</section>
 
-<p>
-    6. Partendo dalla data di oggi (usando la classe DateTime) stampare in pagina
+<section>
+    <p>
+        6. Partendo dalla data di oggi (usando la classe DateTime) stampare in pagina
         a. la data di 7 giorni fa
         b. che giorno della settimana è oggi (il risultato dovrà essere il nome del giorno (Lunedì, Martedì, ...)
         c. che giorno della settimana sarà nello stesso giorno e mese di oggi ma tra un anno (il risultato dovrà essere il nome del giorno (Lunedì, Martedì, ...)
-</p>
+    </p>
 
-<p>
-    <span>6 - Data di oggi: @DateTime.Today</span> <br />
-    <span>6a - Data di 7 giorni fa: @DateTime.Now.AddDays(-7)</span><br />
-    <span>6b - Giorno della settimana di oggi: @DateTime.Today.ToString("dddd") </span><br />
-    <span>6c - Giorno della settimana di oggi ma tra un anno: @DateTime.Today.AddYears(1).ToString("dddd")</span>
-</p>
+    <p>
+        <span>6 - Data di oggi: @DateTime.Today</span> <br />
+        <span>6a - Data di 7 giorni fa: @DateTime.Now.AddDays(-7)</span><br />
+        <span>6b - Giorno della settimana di oggi: @DateTime.Today.ToString("dddd") </span><br />
+        <span>6c - Giorno della settimana di oggi ma tra un anno: @DateTime.Today.AddYears(1).ToString("dddd")</span>
+    </p>
+</section>
