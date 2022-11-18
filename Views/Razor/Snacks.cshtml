@@ -17,7 +17,7 @@
 }
 
 <h2>@nome @cognome</h2>
-
+<hr />
 
 <p>
     2. Creare una funzione che stampa la somma dei numeri che vanno da 1 a n (con n passato come parametro - n incluso)
@@ -38,3 +38,71 @@
 }
 
 <span>@SumNumber(8)</span>
+<hr />
+
+<p>
+    3. Contare quante volte la lettera a è presente nalla frase "nel mezzo del cammin di nostra vita" e stampare questo valore in pagina
+</p>
+
+@{
+    string text = "nel mezzo del cammin di nostra vita";
+    int count = 0;
+    foreach(char a in text)
+    {
+        if(a == 'a')
+        {
+            count++;
+        }
+    }
+}
+    <span>La lettera "a" è presente @count volte nel testo</span>
+
+<hr />
+
+<p>
+    4. Creare una List<int> di 20 numeri interi (generati random da 1 a 90, 1 e 90 inclusi) e mostrare in pagina solo i numeri compresi tra 20 e 70
+</p>
+
+    @{
+        List<int> numbers = new List<int>();
+        Random rand = new Random();
+        for (int i = 0; i < 20; i++)
+        {
+            numbers.Add(rand.Next(1, 91));
+        }
+    }
+
+    <ul>
+        @foreach (int n in numbers)
+        {
+            if (n >= 20 && n <= 70)
+            {
+                <li>@n</li>
+            }
+        }
+    </ul>
+
+<hr />
+
+<p>
+    5. Stampare in pagina la data e l'ora attuale (usando la classe DateTime) con il formato anno-mese-giorno ore:minuti:secondi
+</p>
+    <p>
+        @DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+    </p>
+
+<hr />
+
+<p>
+    6. Partendo dalla data di oggi (usando la classe DateTime) stampare in pagina
+        a. la data di 7 giorni fa
+        b. che giorno della settimana è oggi (il risultato dovrà essere il nome del giorno (Lunedì, Martedì, ...)
+        c. che giorno della settimana sarà nello stesso giorno e mese di oggi ma tra un anno (il risultato dovrà essere il nome del giorno (Lunedì, Martedì, ...)
+</p>
+
+<p>
+    <span>6 - Data di oggi: @DateTime.Today</span> <br />
+    <span>6a - Data di 7 giorni fa: @DateTime.Now.AddDays(-7)</span><br />
+    <span>6b - Giorno della settimana di oggi: @DateTime.Today.ToString("dddd") </span><br />
+    <span>6c - Giorno della settimana di oggi ma tra un anno: @DateTime.Today.AddYears(1).ToString("dddd")</span>
+</p>
