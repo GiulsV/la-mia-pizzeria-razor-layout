@@ -5,17 +5,18 @@ una parte ci porterà a fare esercizi con Razor
 la seconda a fare delle prove con i layout di .Net Core MVC
 IMPORTANTE: Per svolgere questo esercizio e tutti quelli che seguiranno dovrete partire dal vostro progetto nel punto in cui lo avevate lasciato, ma dovete sganciare la vecchia repository git, eliminando la cartella git e tutti i file di git associati. Una volta fatto se voi aprite la vostra soluzione noterete che git non è più configurato e potrete dunque ricreare una nuova repository a partire da dove avevate lasciato il vostro progetto precedente.
 
-— PRIMA PARTE —- Per svolgere gli esercizi che trovate nel file esercizi-razor.txt eseguite i seguenti passi:
-	-create un nuovo Controller chiamato RazorController
-	-create la action Snacks
-	-create la vista relativa al controller e la action creata nei punti precedenti.
-	all’interno della vista svolgete gli esercizi.
+— PRIMA PARTE —
+	- Per svolgere gli esercizi che trovate nel file esercizi-razor.txt eseguite i seguenti passi:
+		-create un nuovo Controller chiamato RazorController
+		-create la action Snacks
+		-create la vista relativa al controller e la action creata nei punti precedenti.
+		-all’interno della vista svolgete gli esercizi.
 
-— SECONDA PARTE —-
-Per questa parte giochiamo un pò con il Layout e le navigazioni:
-	-create un link nella navigazione del Layout principale che vi permetta di arrivare agli esercizi Razor (quindi alla action e al controller creato nella prima parte dell’esercitazione.
-	-Configurate un nuovo Layout senza header (quindi senza navigazione) e senza footer e applicatelo alla vista degli esercizi
-	-Inserite un link nella vista degli esercizi che vi riporti alla Home Page
+— SECONDA PARTE —
+	-Per questa parte giochiamo un pò con il Layout e le navigazioni:
+		-create un link nella navigazione del Layout principale che vi permetta di arrivare agli esercizi Razor (quindi alla action e al controller creato nella prima parte dell’esercitazione.
+		-Configurate un nuovo Layout senza header (quindi senza navigazione) e senza footer e applicatelo alla vista degli esercizi
+		-Inserite un link nella vista degli esercizi che vi riporti alla Home Page
 
 ----------------------------------------------------------------------------------
 
