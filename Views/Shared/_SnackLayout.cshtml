@@ -10,11 +10,20 @@
 </head>
 <body>
     <div class="container">
+        <div>
+            <a class="nav-link text-dark" href="@Url.Action("Index", "Home")">Home</a>
+            <hr />
+        </div>
+
         <h1>Layout Razor Snack</h1>
 
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+        <div>
+            <a class="nav-link text-dark" href="@Url.Action("Index", "Home")">Home</a>
+            <hr />
+        </div>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
